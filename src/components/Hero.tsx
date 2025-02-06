@@ -6,15 +6,20 @@ const Hero = () => {
       <div className="container mx-auto px-6">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Hi, I'm <span className="text-primary">Your Name</span>
+            Hi, I'm <span className="text-primary">Percian Joseph C. Borja</span>
           </h1>
           <h2 className="text-2xl md:text-4xl text-gray-600 mb-8">
-            Full Stack Developer
+            Web Developer & Data Analyst
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-12">
-            I build exceptional digital experiences that make a difference.
-            Passionate about creating innovative solutions through code.
-          </p>
+          <div className="text-lg md:text-xl text-gray-600 max-w-2xl mb-12 space-y-4">
+            <p>
+              Based in the Philippines, I specialize in creating exceptional digital solutions through:
+            </p>
+            <ul className="list-disc list-inside space-y-2 pl-4">
+              <li><span className="font-semibold">Web Development:</span> PHP, WordPress, Shopify, JavaScript</li>
+              <li><span className="font-semibold">Data Analytics:</span> PowerBI, Excel, LookerStudio</li>
+            </ul>
+          </div>
           <Link
             to="contact"
             spy={true}
