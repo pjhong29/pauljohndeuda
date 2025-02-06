@@ -9,11 +9,11 @@ const Hero = () => {
             Hi, I'm <span className="text-primary">Percian Joseph C. Borja</span>
           </h1>
           <h2 className="text-2xl md:text-4xl text-gray-600 mb-8">
-            Web Developer & Data Analyst
+            Full Stack Developer & Data Analyst
           </h2>
           <div className="text-lg md:text-xl text-gray-600 max-w-2xl mb-12">
             <p>
-              Based in the Philippines, I specialize in creating exceptional digital solutions through web development using PHP, WordPress, Shopify, and JavaScript. I also excel in data analytics, leveraging tools like PowerBI, Excel, and LookerStudio to derive meaningful insights from complex datasets.
+              Based in the Philippines, I am a versatile developer proficient in modern web technologies including HTML5, CSS3, and client-side scripting. My expertise extends to server-side development with PHP and Laravel, along with SQL database management and API development. I excel in content management systems like WordPress, utilizing Unyson and Elementor, as well as e-commerce solutions with Shopify, Liquid, and GraphQL. My skill set also encompasses project management using SCRUM methodology, research and development, and data analysis with PowerBI and Microsoft Office suite.
             </p>
           </div>
           <Link
