@@ -11,14 +11,10 @@ const Hero = () => {
           <h2 className="text-2xl md:text-4xl text-gray-600 mb-8">
             Web Developer & Data Analyst
           </h2>
-          <div className="text-lg md:text-xl text-gray-600 max-w-2xl mb-12 space-y-4">
+          <div className="text-lg md:text-xl text-gray-600 max-w-2xl mb-12">
             <p>
-              Based in the Philippines, I specialize in creating exceptional digital solutions through:
+              Based in the Philippines, I specialize in creating exceptional digital solutions through web development using PHP, WordPress, Shopify, and JavaScript. I also excel in data analytics, leveraging tools like PowerBI, Excel, and LookerStudio to derive meaningful insights from complex datasets.
             </p>
-            <ul className="list-disc list-inside space-y-2 pl-4">
-              <li><span className="font-semibold">Web Development:</span> PHP, WordPress, Shopify, JavaScript</li>
-              <li><span className="font-semibold">Data Analytics:</span> PowerBI, Excel, LookerStudio</li>
-            </ul>
           </div>
           <Link
             to="contact"
