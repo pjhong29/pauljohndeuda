@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -6,7 +7,7 @@ import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="bg-background">
+    <div className="bg-background min-h-screen">
       <Navigation />
       <Hero />
       <About />

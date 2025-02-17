@@ -1,3 +1,4 @@
+
 import { Link } from "react-scroll";
 
 const Navigation = () => {
@@ -9,7 +10,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 py-4">
+    <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-sm z-50 py-4 border-b border-gray-800">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center">
           <span className="text-xl font-bold text-primary">Portfolio</span>
@@ -22,7 +23,7 @@ const Navigation = () => {
                 smooth={true}
                 offset={-100}
                 duration={500}
-                className="cursor-pointer hover:text-primary transition-colors"
+                className="text-gray-400 cursor-pointer hover:text-primary transition-colors"
               >
                 {item.name}
               </Link>
