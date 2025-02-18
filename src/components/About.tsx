@@ -1,7 +1,12 @@
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useEffect, useRef } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const About = () => {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })]);
+
   const services = [
     {
       title: "Web Development",
@@ -26,10 +31,10 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background text-foreground">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-12 md:py-20 bg-background text-foreground">
+      <div className="container mx-auto px-4 md:px-6">
         {/* About Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-20">
           <div className="animate-slide-up">
             <h2 className="text-4xl font-bold mb-6">About Me</h2>
             <p className="text-lg text-gray-400 mb-6">
@@ -60,9 +65,9 @@ const About = () => {
           <div className="relative animate-slide-up">
             <div className="absolute top-0 right-0 w-full h-full bg-primary/20 rounded-full blur-3xl"></div>
             <img
-              src="/lovable-uploads/20c534a2-d1f0-48d4-adb0-d515c40632c3.png"
+              src="/lovable-uploads/c6340ee8-1b05-4d88-b834-224eb1b4e773.png"
               alt="Developer Illustration"
-              className="relative z-10 w-full h-auto"
+              className="relative z-10 w-3/4 md:w-full mx-auto h-auto"
             />
           </div>
         </div>
@@ -70,26 +75,18 @@ const About = () => {
         {/* What I Can Do For You Section */}
         <div className="mt-20">
           <h2 className="text-4xl font-bold text-center mb-12">What I Can Do For You</h2>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent>
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
               {services.map((service, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div key={index} className="flex-[0_0_90%] md:flex-[0_0_60%] lg:flex-[0_0_40%] px-4">
                   <div className="bg-secondary/50 p-6 rounded-xl h-full border border-primary/10">
                     <h3 className="text-xl font-semibold mb-4 text-primary">{service.title}</h3>
                     <p className="text-gray-400">{service.description}</p>
                   </div>
-                </CarouselItem>
+                </div>
               ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+            </div>
+          </div>
         </div>
       </div>
     </section>
