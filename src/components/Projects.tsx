@@ -1,4 +1,3 @@
-
 import useEmblaCarousel from "embla-carousel-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -9,7 +8,19 @@ const Projects = () => {
     containScroll: "trimSnaps"
   });
 
+  const [websitesRef] = useEmblaCarousel({
+    loop: true,
+    align: "center",
+    containScroll: "trimSnaps"
+  });
+
   const projects = [
+    {
+      title: "Inventory System",
+      description: "An inventory management system developed for the Provincial Government of Bataan to manage supplies and materials efficiently.",
+      image: "/lovable-uploads/bb3a1a7e-9162-419c-86ae-6d2211d0db57.png",
+      skills: ["PHP", "Laravel", "MySQL", "JavaScript", "HTML5", "CSS", "jQuery", "AJAX", "MVC"]
+    },
     {
       title: "Procurement Management System",
       description: "A comprehensive system developed for the Provincial Government of Bataan to streamline their procurement processes, featuring real-time tracking and automated workflows.",
@@ -73,8 +84,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-20 bg-background relative">
+      <div className="absolute inset-0 bg-[url('/path-to-background.jpg')] bg-fixed opacity-10"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl font-bold text-center mb-12">Featured Projects</h2>
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
@@ -116,30 +128,38 @@ const Projects = () => {
         </div>
 
         <h2 className="text-4xl font-bold text-center mb-12 mt-20">Websites</h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          {websites.map((site, index) => (
-            <a
-              key={index}
-              href={site.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block"
-            >
-              <div className="bg-secondary/50 rounded-xl overflow-hidden border border-primary/10 transition-all hover:border-primary/30">
-                <div className="aspect-video overflow-hidden relative">
-                  <img
-                    src={site.image}
-                    alt={site.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-foreground">{site.title}</h3>
-                  <p className="text-gray-400">{site.description}</p>
-                </div>
+        <div className="overflow-hidden" ref={websitesRef}>
+          <div className="flex">
+            {websites.map((site, index) => (
+              <div 
+                key={index} 
+                className={`flex-[0_0_30%] md:flex-[0_0_25%] px-4 ${
+                  index % 3 === 1 ? 'md:flex-[0_0_35%]' : ''
+                }`}
+              >
+                <a
+                  href={site.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group"
+                >
+                  <div className="bg-secondary/50 rounded-xl overflow-hidden border border-primary/10 transition-all hover:border-primary/30">
+                    <div className="aspect-video overflow-hidden relative">
+                      <img
+                        src={site.image}
+                        alt={site.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-2 text-foreground">{site.title}</h3>
+                      <p className="text-gray-400">{site.description}</p>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </a>
-          ))}
+            ))}
+          </div>
         </div>
 
         <h2 className="text-4xl font-bold text-center mb-12 mt-20">Data Analytics</h2>
