@@ -1,3 +1,4 @@
+
 import useEmblaCarousel from "embla-carousel-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -85,7 +86,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 bg-background relative">
-      <div className="absolute inset-0 bg-[url('/path-to-background.jpg')] bg-fixed opacity-10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,#1a1f2c_0%,#10b981_100%)] bg-fixed opacity-10"></div>
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl font-bold text-center mb-12">Featured Projects</h2>
         <div className="overflow-hidden" ref={emblaRef}>
@@ -163,30 +164,33 @@ const Projects = () => {
         </div>
 
         <h2 className="text-4xl font-bold text-center mb-12 mt-20">Data Analytics</h2>
-        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-4xl mx-auto">
-          {analytics.map((item, index) => (
-            <a
-              key={index}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block"
-            >
-              <div className="bg-secondary/50 rounded-xl overflow-hidden border border-primary/10 transition-all hover:border-primary/30">
-                <div className="aspect-video overflow-hidden relative">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+        <div className="relative">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#1a1f2c_0%,#10b981_100%)] bg-fixed opacity-10"></div>
+          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-4xl mx-auto relative z-10">
+            {analytics.map((item, index) => (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <div className="bg-secondary/50 rounded-xl overflow-hidden border border-primary/10 transition-all hover:border-primary/30">
+                  <div className="aspect-video overflow-hidden relative">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
+                    <p className="text-gray-400">{item.description}</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
-                  <p className="text-gray-400">{item.description}</p>
-                </div>
-              </div>
-            </a>
-          ))}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
