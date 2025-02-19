@@ -1,18 +1,24 @@
-
 import useEmblaCarousel from "embla-carousel-react";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const [emblaRef] = useEmblaCarousel({
     loop: true,
     align: "center",
-    containScroll: "trimSnaps"
+    containScroll: "trimSnaps",
+    breakpoints: {
+      '(max-width: 768px)': { align: 'start' }
+    }
   });
 
   const [websitesRef] = useEmblaCarousel({
     loop: true,
     align: "center",
-    containScroll: "trimSnaps"
+    containScroll: "trimSnaps",
+    breakpoints: {
+      '(max-width: 768px)': { align: 'start' }
+    }
   });
 
   const projects = [
@@ -88,13 +94,25 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-background relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,#1a1f2c_0%,#10b981_100%)] bg-fixed opacity-10"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl font-bold text-center mb-12">Featured Projects</h2>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-center mb-12"
+        >
+          Featured Projects
+        </motion.h2>
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {projects.map((project, index) => (
-              <div 
-                key={index} 
-                className={`flex-[0_0_30%] md:flex-[0_0_25%] px-4 ${
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`flex-[0_0_100%] md:flex-[0_0_30%] px-4 ${
                   index % 3 === 1 ? 'md:flex-[0_0_35%]' : ''
                 }`}
               >
@@ -123,18 +141,30 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        <h2 className="text-4xl font-bold text-center mb-12 mt-20">Websites</h2>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-center mb-12 mt-20"
+        >
+          Websites
+        </motion.h2>
         <div className="overflow-hidden" ref={websitesRef}>
           <div className="flex">
             {websites.map((site, index) => (
-              <div 
-                key={index} 
-                className={`flex-[0_0_30%] md:flex-[0_0_25%] px-4 ${
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`flex-[0_0_100%] md:flex-[0_0_30%] px-4 ${
                   index % 3 === 1 ? 'md:flex-[0_0_35%]' : ''
                 }`}
               >
@@ -158,12 +188,20 @@ const Projects = () => {
                     </div>
                   </div>
                 </a>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        <h2 className="text-4xl font-bold text-center mb-12 mt-20">Data Analytics</h2>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-center mb-12 mt-20"
+        >
+          Data Analytics
+        </motion.h2>
         <div className="relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#1a1f2c_0%,#10b981_100%)] bg-fixed opacity-10"></div>
           <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-4xl mx-auto relative z-10">
