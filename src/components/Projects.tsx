@@ -1,3 +1,4 @@
+
 import useEmblaCarousel from "embla-carousel-react";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
@@ -206,8 +207,8 @@ const Projects = () => {
         >
           Data Analytics
         </motion.h2>
-        <div className="relative">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#1a1f2c_0%,#10b981_100%)] bg-fixed opacity-10"></div>
+        <div className="relative p-8 rounded-2xl overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1A1F2C] via-[#1A1F2C]/90 to-primary/20 opacity-90"></div>
           <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-4xl mx-auto relative z-10">
             {analytics.map((item, index) => (
               <motion.div
@@ -223,7 +224,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="group block"
                 >
-                  <div className="bg-secondary/50 rounded-xl overflow-hidden border border-primary/10 transition-all hover:border-primary/30">
+                  <div className="bg-secondary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-primary/10 transition-all hover:border-primary/30">
                     <div className="aspect-video overflow-hidden relative">
                       <img
                         src={item.image}
