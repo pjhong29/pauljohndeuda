@@ -1,3 +1,4 @@
+
 import useEmblaCarousel from "embla-carousel-react";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
@@ -206,27 +207,34 @@ const Projects = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#1a1f2c_0%,#10b981_100%)] bg-fixed opacity-10"></div>
           <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-4xl mx-auto relative z-10">
             {analytics.map((item, index) => (
-              <a
+              <motion.div
                 key={index}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
               >
-                <div className="bg-secondary/50 rounded-xl overflow-hidden border border-primary/10 transition-all hover:border-primary/30">
-                  <div className="aspect-video overflow-hidden relative">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  <div className="bg-secondary/50 rounded-xl overflow-hidden border border-primary/10 transition-all hover:border-primary/30">
+                    <div className="aspect-video overflow-hidden relative">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
+                      <p className="text-gray-400">{item.description}</p>
+                    </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
-                    <p className="text-gray-400">{item.description}</p>
-                  </div>
-                </div>
-              </a>
+                </a>
+              </motion.div>
             ))}
           </div>
         </div>
