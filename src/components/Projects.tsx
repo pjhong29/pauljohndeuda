@@ -1,24 +1,29 @@
-
 import useEmblaCarousel from "embla-carousel-react";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
 const Projects = () => {
   const [emblaRef] = useEmblaCarousel({
-    loop: true,
-    align: "center",
-    containScroll: "trimSnaps",
+    loop: false,
+    align: "start",
+    slidesToScroll: 3,
     breakpoints: {
-      '(max-width: 768px)': { align: 'start' }
+      '(max-width: 768px)': { 
+        slidesToScroll: 1,
+        align: 'start'
+      }
     }
   });
 
   const [websitesRef] = useEmblaCarousel({
-    loop: true,
-    align: "center",
-    containScroll: "trimSnaps",
+    loop: false,
+    align: "start",
+    slidesToScroll: 3,
     breakpoints: {
-      '(max-width: 768px)': { align: 'start' }
+      '(max-width: 768px)': { 
+        slidesToScroll: 1,
+        align: 'start'
+      }
     }
   });
 
@@ -105,7 +110,7 @@ const Projects = () => {
           Featured Projects
         </motion.h2>
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
+          <div className="flex -mx-4">
             {projects.map((project, index) => (
               <motion.div 
                 key={index}
@@ -113,9 +118,7 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`flex-[0_0_100%] md:flex-[0_0_30%] px-4 ${
-                  index % 3 === 1 ? 'md:flex-[0_0_35%]' : ''
-                }`}
+                className="flex-[0_0_33.333%] px-4"
               >
                 <div className="bg-secondary/50 rounded-xl overflow-hidden border border-primary/10 h-full">
                   <div className="aspect-video overflow-hidden relative">

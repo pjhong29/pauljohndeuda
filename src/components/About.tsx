@@ -1,7 +1,7 @@
-
 import { useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })]);
@@ -32,10 +32,17 @@ const About = () => {
   return (
     <section id="about" className="py-12 md:py-20 bg-background text-foreground">
       <div className="container mx-auto px-4 md:px-6">
-        {/* About Section */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-20">
           <div className="animate-slide-up">
-            <h2 className="text-4xl font-bold mb-6">About Me</h2>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold mb-6"
+            >
+              About Me
+            </motion.h2>
             <p className="text-lg text-gray-400 mb-6">
               I'm a passionate Full Stack Developer with extensive experience in web development
               and data analysis. My expertise spans across modern web technologies, database management,
@@ -71,9 +78,16 @@ const About = () => {
           </div>
         </div>
 
-        {/* What I Can Do For You Section */}
         <div className="mt-20">
-          <h2 className="text-4xl font-bold text-center mb-12">What I Can Do For You</h2>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-12"
+          >
+            What I Can Do For You
+          </motion.h2>
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {services.map((service, index) => (
