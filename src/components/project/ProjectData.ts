@@ -81,7 +81,7 @@ export const websites: Website[] = [
     title: "EASTWOODS Balanga",
     url: "https://epcst.edu.ph",
     description: "Official website of EASTWOODS Professional College of Science and Technology",
-    image: "/lovable-uploads/18e3305f-224e-45bd-afee-fa5584928475.png"
+    image: "/lovable-uploads/18e3305f-224e-45bd-afee-fa5584928471.jpg"
   }
 ];
 
