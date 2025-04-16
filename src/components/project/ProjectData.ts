@@ -1,4 +1,3 @@
-
 export interface Project {
   title: string;
   description: string;
@@ -77,6 +76,12 @@ export const websites: Website[] = [
     url: "https://shoptake15.com/",
     description: "E-commerce platform for wellness products",
     image: "/lovable-uploads/b75fedc5-e723-4ecd-a0af-b358b9afeee0.png"
+  },
+  {
+    title: "EASTWOODS Balanga",
+    url: "https://epcst.edu.ph",
+    description: "Official website of EASTWOODS Professional College of Science and Technology",
+    image: "/lovable-uploads/18e3305f-224e-45bd-afee-fa5584928475.png"
   }
 ];
 
