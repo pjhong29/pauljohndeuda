@@ -1,3 +1,4 @@
+
 export interface Project {
   title: string;
   description: string;
@@ -53,6 +54,12 @@ export const projects: Project[] = [
 ];
 
 export const websites: Website[] = [
+  {
+    title: "SkySoles US",
+    url: "https://skysoles.com",
+    description: "Aviation footwear with focus on innovation",
+    image: "/lovable-uploads/a92960e6-e5db-408d-b6f3-e1242ae12d5a.png"
+  },
   {
     title: "Stage4Tuning",
     url: "https://stage4tuning.com/",
