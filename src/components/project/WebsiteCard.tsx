@@ -20,7 +20,7 @@ const WebsiteCard = ({ website, index }: WebsiteCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4"
+      className="w-full"
     >
       <a
         href={website.url}

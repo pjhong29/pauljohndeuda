@@ -1,5 +1,4 @@
 
-import useEmblaCarousel from "embla-carousel-react";
 import WebsiteCard from "./WebsiteCard";
 import SectionTitle from "./SectionTitle";
 
@@ -15,30 +14,17 @@ interface WebsitesSectionProps {
 }
 
 const WebsitesSection = ({ websites }: WebsitesSectionProps) => {
-  const [websitesRef] = useEmblaCarousel({
-    loop: false,
-    align: "start",
-    slidesToScroll: 1,
-    breakpoints: {
-      '(min-width: 1024px)': { slidesToScroll: 3 },
-      '(min-width: 768px) and (max-width: 1023px)': { slidesToScroll: 2 },
-      '(max-width: 767px)': { slidesToScroll: 1 }
-    }
-  });
-
   return (
     <>
       <SectionTitle title="Websites" className="mt-20" />
-      <div className="overflow-hidden" ref={websitesRef}>
-        <div className="flex">
-          {websites.map((website, index) => (
-            <WebsiteCard 
-              key={index} 
-              website={website} 
-              index={index} 
-            />
-          ))}
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {websites.map((website, index) => (
+          <WebsiteCard 
+            key={index} 
+            website={website} 
+            index={index} 
+          />
+        ))}
       </div>
     </>
   );
