@@ -1,4 +1,3 @@
-
 export interface Project {
   title: string;
   description: string;
@@ -89,6 +88,12 @@ export const websites: Website[] = [
     url: "https://epcst.edu.ph",
     description: "Official website of EASTWOODS Professional College of Science and Technology",
     image: "/lovable-uploads/18e3305f-224e-45bd-afee-fa5584928471.jpg"
+  },
+  {
+    title: "Greenside Property Care",
+    url: "https://www.greensidepropertycare.com/",
+    description: "Professional lawn care and property maintenance services",
+    image: "/lovable-uploads/ba4fc123-a300-4914-be3b-937cfa015d35.png"
   }
 ];
 
