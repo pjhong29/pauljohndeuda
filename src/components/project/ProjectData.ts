@@ -19,6 +19,13 @@ export interface Analytics {
   image: string;
 }
 
+export interface WebDesign {
+  title: string;
+  url: string;
+  description: string;
+  image: string;
+}
+
 export const projects: Project[] = [
   {
     title: "Inventory System",
@@ -94,6 +101,21 @@ export const websites: Website[] = [
     url: "https://www.greensidepropertycare.com/",
     description: "Professional lawn care and property maintenance services",
     image: "/lovable-uploads/ba4fc123-a300-4914-be3b-937cfa015d35.png"
+  }
+];
+
+export const webDesigns: WebDesign[] = [
+  {
+    title: "Studer Education",
+    url: "https://www.figma.com/design/RnWUjyWBpMfux8KkodmtjB/StuderEducation?node-id=0-1&t=6jDbAn15nMFNdKzC-1",
+    description: "Educational platform design empowering education leaders",
+    image: "/lovable-uploads/31e6444e-29ad-4614-9c2a-82fc16be94b3.png"
+  },
+  {
+    title: "Sophfeet Product",
+    url: "https://www.figma.com/design/pmcuHZuhuznvX58lcAUR6W/Sophfeet-Product-Page?node-id=0-1&t=Oo3lbcneLxYFtZDt-1",
+    description: "E-commerce product page design for faith-based grip socks",
+    image: "/lovable-uploads/eb96b9ad-e874-4055-8e1f-5de8adbb84ee.png"
   }
 ];
 

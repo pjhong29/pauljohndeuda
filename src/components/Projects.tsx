@@ -2,8 +2,9 @@
 import { motion } from "framer-motion";
 import ProjectsSection from "./project/ProjectsSection";
 import WebsitesSection from "./project/WebsitesSection";
+import WebDesignsSection from "./project/WebDesignsSection";
 import AnalyticsSection from "./project/AnalyticsSection";
-import { projects, websites, analytics } from "./project/ProjectData";
+import { projects, websites, webDesigns, analytics } from "./project/ProjectData";
 
 const Projects = () => {
   return (
@@ -17,6 +18,7 @@ const Projects = () => {
       >
         <ProjectsSection projects={projects} />
         <WebsitesSection websites={websites} />
+        <WebDesignsSection webDesigns={webDesigns} />
         <AnalyticsSection analytics={analytics} />
       </motion.div>
     </section>
