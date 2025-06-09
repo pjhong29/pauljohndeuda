@@ -107,6 +107,12 @@ export const websites: Website[] = [
     url: "https://www.meylorchiro.com/",
     description: "Trusted chiropractic and acupuncture care in Lenexa, Kansas",
     image: "/lovable-uploads/937a7636-24b1-4046-934c-c3d8883e1da8.png"
+  },
+  {
+    title: "Birch Chiropractic & Rehab",
+    url: "https://www.birchchirokc.com/",
+    description: "Top chiropractor in North Kansas City offering comprehensive chiropractic and rehabilitation services",
+    image: "/lovable-uploads/950e9487-409e-4e7d-98a4-db618559c6e0.png"
   }
 ];
 
