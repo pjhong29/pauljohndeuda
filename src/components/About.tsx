@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -54,19 +55,6 @@ const About = () => {
               data analysis solutions. My approach combines technical expertise with
               project management skills to deliver high-quality results.
             </p>
-            <a
-              href="https://1drv.ms/b/s!ApMIb45WnH01haom78Ex_4mBTurR8g?e=FCRdls"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full inline-flex items-center gap-2 transition-all"
-            >
-              Download CV
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-            </a>
           </div>
           <div className="relative animate-slide-up">
             <div className="absolute top-0 right-0 w-full h-full bg-primary/20 rounded-full blur-3xl"></div>

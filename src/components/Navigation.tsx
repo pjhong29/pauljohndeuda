@@ -11,7 +11,6 @@ const Navigation = () => {
     { name: "Home", to: "hero" },
     { name: "About", to: "about" },
     { name: "Projects", to: "projects" },
-    { name: "Contact", to: "contact" },
   ];
 
   return (
@@ -24,7 +23,7 @@ const Navigation = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Percian Borja
+            Coreflow.Life
           </motion.span>
 
           {/* Desktop Menu */}
