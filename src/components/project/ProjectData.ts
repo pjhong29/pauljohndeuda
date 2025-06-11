@@ -146,6 +146,12 @@ export const webDesigns: WebDesign[] = [
     url: "https://www.figma.com/design/pmcuHZuhuznvX58lcAUR6W/Sophfeet-Product-Page?node-id=0-1&t=Oo3lbcneLxYFtZDt-1",
     description: "E-commerce product page design for faith-based grip socks",
     image: "/lovable-uploads/eb96b9ad-e874-4055-8e1f-5de8adbb84ee.png"
+  },
+  {
+    title: "Birdcage Agency Website",
+    url: "https://www.figma.com/proto/6zEHWTQUvGfee6D17Ebiqz/Agency-Website?node-id=20-2&p=f&t=EGdrPFk3CQvtWJNk-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+    description: "Modern agency website design with professional layout and compelling visual elements",
+    image: "/lovable-uploads/5515dc09-d118-4918-b93f-e1dd2b610d7b.png"
   }
 ];
 
