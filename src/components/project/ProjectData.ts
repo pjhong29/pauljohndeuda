@@ -113,6 +113,24 @@ export const websites: Website[] = [
     url: "https://www.birchchirokc.com/",
     description: "Top chiropractor in North Kansas City offering comprehensive chiropractic and rehabilitation services",
     image: "/lovable-uploads/950e9487-409e-4e7d-98a4-db618559c6e0.png"
+  },
+  {
+    title: "On With Life Chiropractic",
+    url: "https://www.onwithlifechiro.com/",
+    description: "Top Lenexa chiropractor focused on helping you feel better and live better",
+    image: "/lovable-uploads/230985ad-d7f9-405d-8b68-6f4a42b6fc7a.png"
+  },
+  {
+    title: "Stinson Chiropractic",
+    url: "https://www.stinsonchiro.com/",
+    description: "Your go-to chiropractor in Springdale for integrative health and comprehensive chiropractic services",
+    image: "/lovable-uploads/57ca868b-4739-42b6-aca3-a8f854047a46.png"
+  },
+  {
+    title: "Healing STL Chiropractic",
+    url: "https://www.healingstlchiropractic.com/",
+    description: "Your partner in family health and wellness, delivering holistic wellness for every family member",
+    image: "/lovable-uploads/a3024f84-25f8-4474-b2e1-6494fe0bf183.png"
   }
 ];
 
