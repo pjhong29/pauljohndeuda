@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -123,8 +122,13 @@ const GalleryModal = ({ folder, galleryName, onClose }: GalleryModalProps) => {
           "FB_VID_8956327688085560534.mp4"
         ]
       };
-      
-      return imageMap[folderName] || [];
+      // Shuffle the array for the requested folder
+      const arr = imageMap[folderName] ? [...imageMap[folderName]] : [];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
     };
 
     const folderImages = getImagesForFolder(folder);
