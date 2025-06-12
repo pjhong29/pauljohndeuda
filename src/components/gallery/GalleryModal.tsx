@@ -152,7 +152,7 @@ const GalleryModal = ({ folder, galleryName, onClose }: GalleryModalProps) => {
       className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4"
       onClick={onClose}
     >
-      <div className="relative w-full max-w-6xl max-h-full" onClick={(e) => e.stopPropagation()}>
+      <div className="relative w-full max-w-6xl max-h-full pt-20" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-2xl font-bold text-white">{galleryName}</h2>
           <button
