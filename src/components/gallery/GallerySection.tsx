@@ -31,6 +31,11 @@ const galleryFolders = [
     description: "Vector illustrations and graphics"
   },
   {
+    name: "Logo Designs",
+    folder: "logos",
+    description: "Logos and branding design projects"
+  },
+  {
     name: "Video Posts",
     folder: "video_posts",
     description: "Social media video content"

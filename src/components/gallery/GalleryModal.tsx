@@ -76,6 +76,12 @@ const GalleryModal = ({ folder, galleryName, onClose }: GalleryModalProps) => {
           "unique.jpeg",
           "winter soldier.jpeg"
         ],
+        logos: [
+          "1.jpg",
+          "1.png",
+          "2.jpg",
+          "3.jpg",
+        ],
         video_posts: [
           "FB_VID_1065446951615898933.mp4",
           "FB_VID_5277974724388691789.mp4",
