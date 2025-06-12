@@ -34,15 +34,25 @@ const GalleryModal = ({ folder, galleryName, onClose }: GalleryModalProps) => {
           "the redeemer.jpg"
         ],
         posters: [
+          "2.png",
+          "54.png",
+          "67.png",
+          "73.png",
+          "90.png",
+          "A1.png",
+          "B1.png",
+          "B2.png",
+          "beefyaki.jpg",
+          "C.png",
+          "D.png",
           "FB_IMG_1731159837189.jpg",
           "FB_IMG_1731159844146.jpg",
           "FB_IMG_1731159853076.jpg",
           "FB_IMG_1731159855505.jpg",
-          "SEPTEMBER IS (1).png",
-          "SEPTEMBER IS.png",
-          "beefyaki.jpg",
           "menu.jpg",
           "new-price-tarp.jpg",
+          "SEPTEMBER IS (1).png",
+          "SEPTEMBER IS.png",
           "shrimpyaki-special.jpg"
         ],
         product_listing: [
