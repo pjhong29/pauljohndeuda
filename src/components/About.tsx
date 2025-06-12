@@ -9,24 +9,24 @@ const About = () => {
 
   const services = [
     {
-      title: "Web Development",
-      description: "Creating responsive and dynamic web applications using modern technologies like PHP, Laravel, and WordPress."
+      title: "Social Media Management",
+      description: "Complete social media strategy including content creation, scheduling, community management, and performance reporting across all platforms."
     },
     {
-      title: "E-commerce Solutions",
-      description: "Building and maintaining online stores using Shopify, implementing custom features with Liquid and GraphQL."
+      title: "Graphic Design",
+      description: "Professional design services including logo design, branding, social media graphics, posters, flyers, brochures, and business cards."
     },
     {
-      title: "Data Analysis",
-      description: "Analyzing complex datasets and creating insightful visualizations using PowerBI and Microsoft Office tools."
+      title: "Video Editing",
+      description: "Creative video content for Reels, TikTok, YouTube Shorts with motion graphics, animations, and engaging visual storytelling."
     },
     {
-      title: "API Development",
-      description: "Designing and implementing robust APIs for seamless system integration and data exchange."
+      title: "Web Design",
+      description: "Modern website design, UI mockups, landing pages, banners, sliders, and complete digital brand experiences."
     },
     {
-      title: "Project Management",
-      description: "Leading projects using SCRUM methodology to ensure efficient delivery and stakeholder satisfaction."
+      title: "Brand Strategy",
+      description: "Comprehensive brand kits, style guides, marketing campaign assets, and content planning with calendar management."
     }
   ];
 
@@ -45,22 +45,21 @@ const About = () => {
               About Me
             </motion.h2>
             <p className="text-lg text-gray-400 mb-6">
-              I'm a passionate Full Stack Developer with extensive experience in web development
-              and data analysis. My expertise spans across modern web technologies, database management,
-              and e-commerce solutions.
+              I'm a passionate Creative Designer and Social Media Specialist with extensive experience in 
+              graphic design, social media management, and digital content creation. My expertise spans 
+              across visual design, video editing, and strategic social media campaigns.
             </p>
             <p className="text-lg text-gray-400 mb-8">
-              With a strong foundation in both client-side and server-side development,
-              I specialize in creating robust web applications and implementing effective
-              data analysis solutions. My approach combines technical expertise with
-              project management skills to deliver high-quality results.
+              With a strong foundation in both creative design and digital marketing, I specialize in 
+              helping brands build their visual identity and engage with their audience through compelling 
+              content. From logo design to social media strategy, I bring creativity and results together.
             </p>
           </div>
           <div className="relative animate-slide-up">
             <div className="absolute top-0 right-0 w-full h-full bg-primary/20 rounded-full blur-3xl"></div>
             <img
-              src="/lovable-uploads/c6340ee8-1b05-4d88-b834-224eb1b4e773.png"
-              alt="Developer Illustration"
+              src="/lovable-uploads/1b6c6faa-4740-45de-ac95-6c04fc7b3b1e.png"
+              alt="Creative Designer Illustration"
               className="relative z-10 w-3/4 md:w-full mx-auto h-auto"
             />
           </div>

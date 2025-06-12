@@ -37,11 +37,13 @@ const Hero = () => {
               Hi,{" "}
               <TypeAnimation
                 sequence={[
-                  "I'm a Web Designer",
+                  "I do Graphic Design",
                   2000,
-                  'I create amazing websites',
+                  'I do Social Media Management',
                   2000,
-                  'I build digital experiences',
+                  'I do Video Editing',
+                  2000,
+                  'I do Web Designing',
                   2000,
                 ]}
                 wrapper="span"
@@ -52,13 +54,13 @@ const Hero = () => {
             </h1>
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className="bg-secondary px-6 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
-                Web Developer & Data Analyst
+                Creative Designer & Social Media Specialist
                 <span className="text-primary">→</span>
               </span>
             </div>
             <div className="text-base md:text-xl text-gray-400 max-w-2xl mb-12 mx-auto">
               <p>
-                Specializing in creating exceptional digital solutions through web development using modern technologies. I excel in creating responsive, user-friendly websites and applications that deliver outstanding user experiences.
+                Specializing in creating captivating visual content and strategic social media management. I excel in graphic design, video editing, and web design that helps brands stand out and connect with their audience through compelling visuals and engaging content.
               </p>
             </div>
             <Link
