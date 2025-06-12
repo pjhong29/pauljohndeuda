@@ -1,10 +1,6 @@
 
 import { motion } from "framer-motion";
-import ProjectsSection from "./project/ProjectsSection";
-import WebsitesSection from "./project/WebsitesSection";
-import WebDesignsSection from "./project/WebDesignsSection";
-import AnalyticsSection from "./project/AnalyticsSection";
-import { projects, websites, webDesigns, analytics } from "./project/ProjectData";
+import GallerySection from "./gallery/GallerySection";
 
 const Projects = () => {
   return (
@@ -16,10 +12,7 @@ const Projects = () => {
         transition={{ duration: 0.8 }}
         className="container mx-auto px-4 relative z-10"
       >
-        <ProjectsSection projects={projects} />
-        <WebsitesSection websites={websites} />
-        <WebDesignsSection webDesigns={webDesigns} />
-        <AnalyticsSection analytics={analytics} />
+        <GallerySection />
       </motion.div>
     </section>
   );
