@@ -19,10 +19,10 @@ const GalleryModal = ({ folder, galleryName, onClose }: GalleryModalProps) => {
     const getImagesForFolder = (folderName: string) => {
       const imageMap: { [key: string]: string[] } = {
         nft_art: [
-          "Kiddoz #000.jpg",
-          "Kiddoz #001.jpg", 
-          "Kiddoz #002.jpg",
-          "Kiddoz #003.jpg",
+          "Kiddoz_000.jpg",
+          "Kiddoz_001.jpg", 
+          "Kiddoz_002.jpg",
+          "Kiddoz_003.jpg",
           "banaue.jpg",
           "boracay.jpg",
           "cold blue.jpg",

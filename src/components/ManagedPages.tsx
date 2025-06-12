@@ -5,6 +5,13 @@ import SectionTitle from "./project/SectionTitle";
 
 const managedPages = [
   {
+    name: "Pinoy Catholics",
+    url: "https://www.facebook.com/PiCaths",
+    description: "Catholic Church Page",
+    followers: "348K followers",
+    image: "/lovable-uploads/18e3305f-224e-45bd-afee-fa5584928475.png"
+  },
+  {
     name: "Parokya ng San Miguel Arkanghel - Orion, Bataan",
     url: "https://www.facebook.com/stmichaelorionbataan",
     description: "Catholic Church Page",
