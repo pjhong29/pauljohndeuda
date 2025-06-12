@@ -58,7 +58,7 @@ const About = () => {
           <div className="relative animate-slide-up">
             <div className="absolute top-0 right-0 w-full h-full bg-primary/20 rounded-full blur-3xl"></div>
             <img
-              src="/lovable-uploads/1b6c6faa-4740-45de-ac95-6c04fc7b3b1e.png"
+              src="/lovable-uploads/1b6c6faa-4740-45de-ac95-6c04fc7b3b1e.svg"
               alt="Creative Designer Illustration"
               className="relative z-10 w-3/4 md:w-full mx-auto h-auto"
             />
