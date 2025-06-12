@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -138,7 +139,7 @@ const GalleryModal = ({ folder, galleryName, onClose }: GalleryModalProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div className="relative w-full max-w-6xl max-h-full" onClick={(e) => e.stopPropagation()}>
@@ -146,7 +147,7 @@ const GalleryModal = ({ folder, galleryName, onClose }: GalleryModalProps) => {
           <h2 className="text-2xl font-bold text-white">{galleryName}</h2>
           <button
             onClick={onClose}
-            className="text-white hover:text-gray-300 transition-colors"
+            className="text-white hover:text-gray-300 transition-colors z-[10000]"
           >
             <X size={32} />
           </button>
@@ -189,13 +190,13 @@ const GalleryModal = ({ folder, galleryName, onClose }: GalleryModalProps) => {
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors z-[10000]"
                   >
                     <ChevronLeft size={24} />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors z-[10000]"
                   >
                     <ChevronRight size={24} />
                   </button>
