@@ -38,17 +38,17 @@ const Hero = () => {
             <h1 className="text-4xl md:text-7xl font-bold mb-6">
               Hi,{" "}
               <TypeAnimation
-              preRenderFirstString={true}
-              sequence={[
-                "I design modern websites",
-                2000,
-                "I create impactful brand visuals",
-                2000,
-                "I build Shopify & WordPress experiences",
-                2000,
-                "I deliver creative solutions for your business",
-                2000,
-              ]}
+                preRenderFirstString={true}
+                sequence={[
+                  "I design stunning graphics",
+                  2000,
+                  "I create memorable brand identities",
+                  2000,
+                  "I craft engaging visual content",
+                  2000,
+                  "I deliver creative graphic solutions",
+                  2000,
+                ]}
                 wrapper="span"
                 speed={50}
                 className="text-primary"
