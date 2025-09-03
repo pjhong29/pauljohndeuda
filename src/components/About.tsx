@@ -2,33 +2,50 @@
 import { useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { useNicheMode } from '../context/NicheModeContext';
 import { motion } from "framer-motion";
 
 const About = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })]);
 
-  const services = [
-    {
-      title: "Social Media Management",
-      description: "Complete social media strategy including content creation, scheduling, community management, and performance reporting across all platforms."
-    },
-    {
-      title: "Graphic Design",
-      description: "Professional design services including logo design, branding, social media graphics, posters, flyers, brochures, and business cards."
-    },
-    {
-      title: "Video Editing",
-      description: "Creative video content for Reels, TikTok, YouTube Shorts with motion graphics, animations, and engaging visual storytelling."
-    },
-    {
-      title: "Web Design",
-      description: "Modern website design, UI mockups, landing pages, banners, sliders, and complete digital brand experiences."
-    },
-    {
-      title: "Brand Strategy",
-      description: "Comprehensive brand kits, style guides, marketing campaign assets, and content planning with calendar management."
-    }
-  ];
+  const { mode } = useNicheMode();
+  const services = mode === 'graphicOnly'
+    ? [
+        {
+          title: "Graphic Design",
+          description: "Professional design services including logo design, branding, posters, flyers, brochures, and business cards."
+        },
+        {
+          title: "Print & Digital Collateral",
+          description: "Design of brochures, business cards, flyers, banners, and digital ads tailored to your brand."
+        },
+        {
+          title: "Brand Strategy",
+          description: "Comprehensive brand kits, style guides, marketing campaign assets, and content planning with calendar management."
+        }
+      ]
+    : [
+        {
+          title: "Graphic Design",
+          description: "Professional design services including logo design, branding, posters, flyers, brochures, and business cards."
+        },
+        {
+          title: "Shopify & WordPress Development",
+          description: "Custom Shopify and WordPress website development, theme customization, e-commerce setup, and ongoing support for your online business."
+        },
+        {
+          title: "Web Design",
+          description: "Modern website design, UI mockups, landing pages, banners, sliders, and complete digital brand experiences."
+        },
+        {
+          title: "Print & Digital Collateral",
+          description: "Design of brochures, business cards, flyers, banners, and digital ads tailored to your brand."
+        },
+        {
+          title: "Brand Strategy",
+          description: "Comprehensive brand kits, style guides, marketing campaign assets, and content planning with calendar management."
+        }
+      ];
 
   return (
     <section id="about" className="py-12 md:py-20 bg-background text-foreground">
@@ -44,23 +61,32 @@ const About = () => {
             >
               About Me
             </motion.h2>
-            <p className="text-lg text-gray-400 mb-6">
-              I'm a passionate Creative Designer and Social Media Specialist with extensive experience in 
-              graphic design, social media management, and digital content creation. My expertise spans 
-              across visual design, video editing, and strategic social media campaigns.
-            </p>
-            <p className="text-lg text-gray-400 mb-8">
-              With a strong foundation in both creative design and digital marketing, I specialize in 
-              helping brands build their visual identity and engage with their audience through compelling 
-              content. From logo design to social media strategy, I bring creativity and results together.
-            </p>
+            {mode === 'graphicOnly' ? (
+              <>
+                <p className="text-lg text-gray-400 mb-6">
+                  I'm a passionate Creative Designer with extensive experience in graphic design and digital content creation. My expertise spans across visual design, branding, and video editing.
+                </p>
+                <p className="text-lg text-gray-400 mb-8">
+                  I help brands build their visual identity and connect with their audience through compelling design. From logo design to brand strategy, I bring creativity and results together.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-lg text-gray-400 mb-6">
+                  I'm a passionate Creative Designer and Web Developer with extensive experience in graphic design, Shopify and WordPress development, and digital content creation. My expertise spans across visual design, custom website creation, and video editing.
+                </p>
+                <p className="text-lg text-gray-400 mb-8">
+                  With a strong foundation in both creative design and digital marketing, I specialize in helping brands build their visual identity and engage with their audience through compelling content. From logo design to branding and building Shopify or WordPress sites, I bring creativity and results together.
+                </p>
+              </>
+            )}
           </div>
           <div className="relative animate-slide-up">
             <div className="absolute top-0 right-0 w-full h-full bg-primary/20 rounded-full blur-3xl"></div>
             <img
-              src="/lovable-uploads/1b6c6faa-4740-45de-ac95-6c04fc7b3b1e.svg"
-              alt="Creative Designer Illustration"
-              className="relative z-10 w-3/4 md:w-full mx-auto h-auto"
+              src="/lovable-uploads/482193236_9297265103652666_4106546451702009321_n.jpg"
+              alt="Paul John Deuda"
+              className="relative z-10 w-3/4 md:w-full mx-auto h-auto rounded-full object-cover aspect-square"
             />
           </div>
         </div>

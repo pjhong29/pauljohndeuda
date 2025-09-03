@@ -23,7 +23,7 @@ const Navigation = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Coreflow.Life
+            Paul John Deuda
           </motion.span>
 
           {/* Desktop Menu */}

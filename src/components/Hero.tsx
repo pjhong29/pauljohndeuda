@@ -1,8 +1,10 @@
 
 import { Link } from "react-scroll";
 import { TypeAnimation } from 'react-type-animation';
+import { useNicheMode } from '../context/NicheModeContext';
 
 const Hero = () => {
+  const { mode } = useNicheMode();
   return (
     <section id="hero" className="min-h-screen flex items-center bg-background text-foreground relative overflow-hidden">
       {/* Animated Background Shapes */}
@@ -38,11 +40,13 @@ const Hero = () => {
               <TypeAnimation
               preRenderFirstString={true}
               sequence={[
-                "I craft stunning graphics",
+                "I design modern websites",
                 2000,
-                "I elevate brands on social media",
+                "I create impactful brand visuals",
                 2000,
-                "I bring stories to life with video",
+                "I build Shopify & WordPress experiences",
+                2000,
+                "I deliver creative solutions for your business",
                 2000,
               ]}
                 wrapper="span"
@@ -53,13 +57,15 @@ const Hero = () => {
             </h1>
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className="bg-secondary px-6 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
-                Creative Designer & Social Media Specialist
+                {mode === 'graphicOnly' ? 'Creative Designer' : 'Creative Designer & Web Developer'}
                 <span className="text-primary">→</span>
               </span>
             </div>
             <div className="text-base md:text-xl text-gray-400 max-w-2xl mb-12 mx-auto">
               <p>
-                Specializing in creating captivating visual content and strategic social media management. I excel in graphic design, video editing, and web design that helps brands stand out and connect with their audience through compelling visuals and engaging content.
+                {mode === 'graphicOnly'
+                  ? 'Specializing in captivating graphic design, branding, and creative visual content. I help brands stand out and connect with their audience through compelling visuals and engaging design.'
+                  : 'Specializing in creating captivating visual content and modern websites. I excel in graphic design, web development, video editing, and web design that helps brands stand out and connect with their audience through compelling visuals, engaging content, and interactive experiences.'}
               </p>
             </div>
             <Link

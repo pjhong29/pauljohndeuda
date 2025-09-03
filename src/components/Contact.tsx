@@ -81,7 +81,7 @@ const Contact = () => {
             </div>
             
             <div className="bg-background/10 backdrop-blur-sm p-6 rounded-xl border border-primary/10">
-              <h3 className="text-xl font-semibold mb-4 text-foreground">Social Media</h3>
+              <h3 className="text-xl font-semibold mb-4 text-foreground">Contact</h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((link) => (
                   <a

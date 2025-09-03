@@ -38,7 +38,7 @@ const galleryFolders = [
   {
     name: "Video Posts",
     folder: "video_posts",
-    description: "Social media video content"
+  description: "Video content"
   }
 ];
 
